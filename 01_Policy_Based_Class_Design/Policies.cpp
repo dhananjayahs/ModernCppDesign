@@ -66,7 +66,7 @@ private:
 typedef WidgetManager<MallocCreator> MyWidgetManager;
 
 int main() {
-  WidgetManager<> widgetManager1;
+  WidgetManager<> widgetManager1;   // default argument for class template which is OpNewCreator in this case
   MyWidgetManager *widgetManager2 = new MyWidgetManager();
   MallocCreator<Widget> *castedWidgetManager2 =
       dynamic_cast<MallocCreator<Widget> *>(widgetManager2);
